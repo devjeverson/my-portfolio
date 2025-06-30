@@ -1,0 +1,25 @@
+#links-sociais {
+  display: flex;
+  padding: 24px 0;
+  font-size: 24px;
+  justify-content: center;
+}
+
+#links-sociais a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 50%;
+  color: #32f502;
+  font-size: 2rem;
+}
+
+#links-sociais a:hover {
+  background: var(--highlight-color);
+}
+
+
+
+
