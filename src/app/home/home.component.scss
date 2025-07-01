@@ -45,12 +45,22 @@
   overflow: hidden;
   border-right: 0.15em solid #32f502;
   white-space: nowrap;
-  animation: typing 4s steps(50, end) forwards;
+  animation: typing 3s steps(50, end) forwards;
 }
 
 .title {
   font-size: 1.5rem;
   color: #00ff15;
+  text-align: center;
+  margin: 0.5rem 0 1rem 0;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 1rem;
+}
+
+.projects {
+  font-size: 1.5rem;
+  color: #070707;
   text-align: center;
   margin: 0.5rem 0 1rem 0;
   font-weight: bold;
