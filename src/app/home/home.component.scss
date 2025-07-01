@@ -1,11 +1,32 @@
+:host {
+  display: block;
+  height: 100%;
+  background: #111;
+}
+
+.main {
+  min-height: calc(100vh - var(--header-height, 60px) - var(--footer-height, 60px));
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 20px;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
 .typing-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
-  height: 75vh;
-  background: #111;
+  height: 40vh;
   text-align: center;
+  margin-bottom: 30px;
+  width: 100%;
 }
 
 .typing-text {
@@ -40,4 +61,56 @@
   50% {
     border-color: transparent;
   }
+}
+
+.card-row {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 220px;
+  height: 230px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.flip-card-front {
+  background-color: #f3f3f3;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #32f502;
+  color: white;
+  transform: rotateY(180deg);
 }
