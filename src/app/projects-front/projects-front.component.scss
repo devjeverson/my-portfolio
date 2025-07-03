@@ -14,7 +14,11 @@
   padding: 40px;
   flex-wrap: wrap; 
   gap: 40px; 
-  position: relative;  
+  position: relative; 
+  max-width: 100%; // ou , se quiser fluido
+  margin: 0 auto;     // centraliza no contêiner
+  box-sizing: border-box;
+  overflow-x: hidden; 
   
 }
 

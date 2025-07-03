@@ -30,6 +30,36 @@ export class ProjectsFrontComponent {
       image: 'assets/projeto-ampliado.png',
       summary: 'Outro projeto incrível feito com Angular e design moderno',
       link: 'https://github.com/seuusuario/seurepositorio2'
+    },
+     {
+      title: 'Projeto Ampliado',
+      image: 'assets/projeto-ampliado.png',
+      summary: 'Outro projeto incrível feito com Angular e design moderno',
+      link: 'https://github.com/seuusuario/seurepositorio2'
+    },
+     {
+      title: 'Projeto Ampliado',
+      image: 'assets/projeto-ampliado.png',
+      summary: 'Outro projeto incrível feito com Angular e design moderno',
+      link: 'https://github.com/seuusuario/seurepositorio2'
+    },
+     {
+      title: 'Projeto Ampliado',
+      image: 'assets/projeto-ampliado.png',
+      summary: 'Outro projeto incrível feito com Angular e design moderno',
+      link: 'https://github.com/seuusuario/seurepositorio2'
+    },
+     {
+      title: 'Projeto Ampliado',
+      image: 'assets/projeto-ampliado.png',
+      summary: 'Outro projeto incrível feito com Angular e design moderno',
+      link: 'https://github.com/seuusuario/seurepositorio2'
+    },
+     {
+      title: 'Projeto Ampliado',
+      image: 'assets/projeto-ampliado.png',
+      summary: 'Outro projeto incrível feito com Angular e design moderno',
+      link: 'https://github.com/seuusuario/seurepositorio2'
     }
   ];
 
