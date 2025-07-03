@@ -1,1 +1,37 @@
-<p>projects-back works!</p>
+<div class="card-row" [class.expanded]="expandedCard !== null">
+  @if (expandedCard === null) {
+    @for (project of projects; track i;let i = $index) {
+      <div
+        class="project-card"
+        (click)="toggleExpand(i)"
+      >
+      <h2 class="project-title">{{ project.title }}</h2>
+        <img 
+          [src]="project.image" 
+          alt="Projeto"
+          class="project-image"
+        >
+        <p class="project-summary">{{ project.summary }}</p>
+        <a [href]="project.link" target="_blank" class="github-link">Ver no GitHub</a>
+      </div>
+    }
+  } @else {
+    <div class="overlay" (click)="closeCard($event)">
+      <button class="nav-button prev" (click)="previousCard(); $event.stopPropagation()"><ion-icon name="arrow-back-outline"></ion-icon></button>
+      <div
+        class="project-card expanded"
+        (click)="$event.stopPropagation()"
+      >
+        <button class="close-button" (click)="closeCard($event)"><ion-icon name="close-outline"></ion-icon></button>
+        <img 
+          [src]="projects[expandedCard!].image" 
+          alt="Projeto"
+          class="project-image expanded"
+        >
+        <p class="project-summary">{{ projects[expandedCard!].summary }}</p>
+        <a [href]="projects[expandedCard!].link" target="_blank" class="github-link">Ver no GitHub</a>
+      </div>
+      <button class="nav-button next" (click)="nextCard(); $event.stopPropagation()"><ion-icon name="arrow-forward-outline"></ion-icon></button>
+    </div>
+  }
+</div>
