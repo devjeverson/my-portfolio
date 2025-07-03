@@ -1,0 +1,47 @@
+name: Deploy to Prod
+
+on:
+  push:
+    branches:
+      - hk  # ou 'main' ou 'dev' — onde você vai fazer o merge final para enviar para produção
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+      with:
+        fetch-depth: 0  # importante para poder fazer push para outros branches
+
+    - name: Setup Node.js (exemplo com Node)
+      uses: actions/setup-node@v3
+      with:
+        node-version: 18
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Build project
+      run: npm run build  # ajuste para seu comando de build (ng build, yarn build, etc)
+
+    - name: Deploy to prod branch
+      run: |
+        git config --global user.name "github-actions"
+        git config --global user.email "actions@github.com"
+
+        # Clona branch prod
+        git clone --branch prod https://github.com/${{ github.repository }} prod
+
+        # Limpa conteúdo da branch prod
+        rm -rf prod/*
+
+        # Copia build para prod
+        cp -r dist/* prod/
+
+        cd prod
+
+        git add .
+        git commit -m "Deploy from workflow: ${{ github.sha }}"
+        git push origin prod
