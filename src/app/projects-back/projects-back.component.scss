@@ -1,10 +1,8 @@
-
 .card-row,
 .card-row.expanded-mode {
   height: calc(92vh - var(--header-height) - var(--footer-height));
   box-sizing: border-box;
 }
-
 
 .card-row {
   display: flex;
@@ -139,8 +137,6 @@
   padding: 0 12px;
   user-select: none;
 }
-
-
 
 .nav-button.prev{
   left: 32px;

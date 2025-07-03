@@ -64,7 +64,7 @@ export class ProjectsMobileComponent {
   }
 
   closeCard(event: Event): void {
-    event.stopPropagation(); // evita conflito com clique no card
+    event.stopPropagation();
     this.expandedCard = null;
   }
 

@@ -1,6 +1,5 @@
 import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
-
 interface Project {
   title: string;
   image: string;
@@ -70,7 +69,7 @@ export class ProjectsFrontComponent {
   }
 
   closeCard(event: Event): void {
-    event.stopPropagation(); // evita conflito com clique no card
+    event.stopPropagation();
     this.expandedCard = null;
   }
 
