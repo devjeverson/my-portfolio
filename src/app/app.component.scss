@@ -5,5 +5,13 @@
 }
 
 .main {
-  flex: 1;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
 }
+
+
+
+
+
