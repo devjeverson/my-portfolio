@@ -1,4 +1,4 @@
-<a routerLink="/" routerLinkActive="active" class="profile-link">
+<div class="profile-link">
   <nav class="navbar">
   <div class="profile">
 
@@ -11,9 +11,9 @@
     </div>  
   </div>
   <ul class="nav-links" [class.open]="menuOpen">
-    <li><a routerLink="/projetos" routerLinkActive="active"><ion-icon name="code-slash-outline"></ion-icon>Projetos</a></li>
-    <li><a routerLink="/sobre" routerLinkActive="active"><ion-icon name="person-outline"></ion-icon> Sobre mim</a></li>
-    <li><a routerLink="/contato" routerLinkActive="active"><ion-icon name="file-tray-full-outline"></ion-icon>Contato</a></li>
+    <li><a routerLink="/" routerLinkActive="active"><ion-icon name="code-slash-outline"></ion-icon>Projetos</a></li>
+    <li><a routerLink="/about-me" routerLinkActive="active"><ion-icon name="person-outline"></ion-icon> Sobre mim</a></li>
+    <li><a routerLink="/contacts" routerLinkActive="active"><ion-icon name="file-tray-full-outline"></ion-icon>Contato</a></li>
   </ul>
     <button class="hamburger" (click)="toggleMenu()">
     <span></span>
@@ -24,6 +24,6 @@
     
   
 </nav>
-</a>
+</div>
 
 

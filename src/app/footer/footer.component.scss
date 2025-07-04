@@ -1,4 +1,4 @@
-#links-sociais {
+.links-sociais {
   display: flex;
   padding: 15px 0;
   font-size: 24px;
@@ -7,7 +7,7 @@
   z-index: 1;
 }
 
-#links-sociais a {
+.links-sociais a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -18,7 +18,7 @@
   font-size: 2rem;
 }
 
-#links-sociais a:hover {
+.links-sociais a:hover {
   background: var(--highlight-color);
 }
 
