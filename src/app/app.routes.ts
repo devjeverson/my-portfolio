@@ -13,5 +13,6 @@ export const routes: Routes = [
   { path: 'component-mobile', component: ProjectsMobileComponent },
   { path: 'about-me', component: AboutMeComponent },
   { path: 'contacts', component: ContactsComponent },
+  { path: 'contato', loadComponent: () => import('./contacts/contacts.component').then(m => ContactsComponent),},
   
 ];

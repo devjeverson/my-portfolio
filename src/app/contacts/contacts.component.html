@@ -1,1 +1,26 @@
-<p>contacts works!</p>
+<section class="contact-section" id="contato">
+  
+    <h2>Entre em Contato</h2>
+
+    <div class="form-wrapper">
+      <form (ngSubmit)="onSubmit()" #contactForm="ngForm">
+        <input type="text" name="nome" [(ngModel)]="form.nome" placeholder="Seu nome" required>
+        <input type="email" name="email" [(ngModel)]="form.email" placeholder="Seu e-mail" required>
+        <input type="text" name="assunto" [(ngModel)]="form.assunto" placeholder="Assunto" required>
+        <textarea name="mensagem" [(ngModel)]="form.mensagem" placeholder="Escreva sua mensagem..." required></textarea>
+
+        <re-captcha 
+          [siteKey]="'SUA_SITE_KEY'"
+          (success)="resolvedCaptcha($event)">
+        </re-captcha>
+
+        <button type="submit" [disabled]="!contactForm.form.valid">Enviar</button>
+
+        <p *ngIf="mensagemEnviada" class="mensagem-sucesso">Mensagem enviada com sucesso!</p>
+      </form>
+    </div>
+    
+  
+  
+</section>
+
