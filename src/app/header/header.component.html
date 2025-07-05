@@ -1,14 +1,16 @@
-<div class="profile-link" routerLink="/">
+<div class="profile-link">
   <nav class="navbar">
   <div class="profile">
-
-    <div class="logo-title">
-      <img src="assets/profile.jpeg" alt="Logo" class="logo-image">
-      <span class="logo-text">Jeverson Oliveira</span>
-    </div>
-    <div class="logo-subtitle">
-      <p>Full Stack Developer</p>
-    </div>  
+    <a routerLink="/" class="rota-link">
+      <div class="logo-title">
+        <img src="assets/profile.jpeg" alt="Logo" class="logo-image">
+        <span class="logo-text">Jeverson Oliveira</span>
+      </div>
+      <div class="logo-subtitle">
+        <p>Full Stack Developer</p>
+      </div>
+    </a>
+      
   </div>
   <ul class="nav-links" [class.open]="menuOpen">
     <li><a routerLink="/" routerLinkActive="active"><ion-icon name="code-slash-outline"></ion-icon>Projetos</a></li>
