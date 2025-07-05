@@ -154,17 +154,18 @@
     height: calc(60vh - 80px);
     flex-direction: column;
     align-items: center;
-    justify-content: start;
-    gap: 1rem;
+    justify-content: flex-start;
+    gap: 2.5rem;
     padding-top: 1rem;
     overflow-y: auto;
+    flex-wrap: nowrap; 
     padding-bottom: 80px;
   }
 
   .content-wrapper {
     flex-direction: column;
-    height: 100vh;
-    max-height: 100vh;
+    height: 95vh;
+    max-height: 85vh;
     overflow: hidden;
   }
 
@@ -184,11 +185,22 @@
     box-sizing: border-box;
   }
 
-  .flip-card {
-    width: 85vw;
+  .flip-card-front, .flip-card-back {
+    width: 55vw;
     max-width: 320px;
     height: 110px;
+    display: flex;
+    
   }
+
+  .flip-card-inner {
+  position: relative;
+  width: 50%;
+  height: 50%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
   .portfolio-image {
     width: 32%;
     margin: 0.2rem 0 0.1rem 0;
@@ -202,17 +214,7 @@
    margin: 0.2rem 0 0.5rem 0;
   }
 
-  // .typing-text {
-  //   font-size: 1rem;
-  //   width: 100%;
-  //   max-width: 100%;
-  //   word-break: break-word;
-  //   text-align: center;
-  // }
-  // .text {
-  //   font-size: 1rem;
-  //   animation: typing-ch-mobile 3s steps(78, end) forwards,   allow-break 0s 3s forwards;
-  // }
+ 
   .typing-text,
   .text {
     font-size: 1rem;

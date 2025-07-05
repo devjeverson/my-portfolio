@@ -22,6 +22,39 @@
   background: var(--highlight-color);
 }
 
+@media (max-width: 700px) {
+  :host,
+  footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 44px !important;
+    min-height: 44px !important;
+    max-height: 44px !important;
+    background: #120606;
+    z-index: 1001;
+    box-shadow: 0 -2px 8px #0008;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .links-sociais {
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    gap: 0.7rem;
+    font-size: 18px;
+  }
+  .links-sociais a {
+    padding: 4px;
+    font-size: 1.3rem;
+  }
+}
 
 
 
