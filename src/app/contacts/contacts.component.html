@@ -9,10 +9,7 @@
         <input type="text" name="assunto" [(ngModel)]="form.assunto" placeholder="Assunto" required>
         <textarea name="mensagem" [(ngModel)]="form.mensagem" placeholder="Escreva sua mensagem..." required></textarea>
 
-        <re-captcha 
-          [siteKey]="'SUA_SITE_KEY'"
-          (success)="resolvedCaptcha($event)">
-        </re-captcha>
+         
 
         <button type="submit" [disabled]="!contactForm.form.valid">Enviar</button>
 
