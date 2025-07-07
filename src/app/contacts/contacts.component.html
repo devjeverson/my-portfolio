@@ -16,8 +16,16 @@
           <span *ngIf="enviando">Enviando...</span>
         </button>
 
-        <p *ngIf="mensagemEnviada" class="mensagem-sucesso">Mensagem enviada com sucesso!</p>
-        <p *ngIf="erro" class="mensagem-erro">Erro ao enviar mensagem. Tente novamente.</p>
+        <p *ngIf="mensagemEnviada" class="mensagem-sucesso">
+          ✅ Formulário enviado com sucesso! 
+          <br>
+          <small>Seus dados foram recebidos. Retornarei o contato em breve!</small>
+        </p>
+        <p *ngIf="erro" class="mensagem-erro">
+          ⚠️ Erro técnico no envio. 
+          <br>
+          <small>Tente novamente ou entre em contato por outro meio.</small>
+        </p>
       </form>
     </div>
     
