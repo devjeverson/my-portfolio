@@ -1,0 +1,17 @@
+{
+  "/api/*": {
+    "target": "https://contato-email-production.up.railway.app",
+    "secure": true,
+    "changeOrigin": true,
+    "logLevel": "debug",
+    "pathRewrite": {
+      "^/api": ""
+    }
+  },
+  "/api": {
+    "target": "https://contato-email-production.up.railway.app",
+    "secure": true,
+    "changeOrigin": true,
+    "logLevel": "debug"
+  }
+}

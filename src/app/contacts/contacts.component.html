@@ -11,9 +11,13 @@
 
          
 
-        <button type="submit" [disabled]="!contactForm.form.valid">Enviar</button>
+        <button type="submit" [disabled]="!contactForm.form.valid || enviando">
+          <span *ngIf="!enviando">Enviar</span>
+          <span *ngIf="enviando">Enviando...</span>
+        </button>
 
         <p *ngIf="mensagemEnviada" class="mensagem-sucesso">Mensagem enviada com sucesso!</p>
+        <p *ngIf="erro" class="mensagem-erro">Erro ao enviar mensagem. Tente novamente.</p>
       </form>
     </div>
     
