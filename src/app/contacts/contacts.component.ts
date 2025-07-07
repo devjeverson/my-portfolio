@@ -36,7 +36,7 @@ export class ContactsComponent {
   }*/
 
   onSubmit() {
-    fetch('http://localhost:8080/send', {
+    fetch('https://contato-email-production.up.railway.app/', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(this.form)
