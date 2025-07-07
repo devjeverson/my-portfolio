@@ -22,7 +22,6 @@ export class ContactsComponent {
   };
 
    mensagemEnviada = false;
-  captchaValid = false;
 
   /*onSubmit() {
     
