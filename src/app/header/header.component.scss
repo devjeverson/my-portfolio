@@ -55,11 +55,9 @@
 .logo-image {
   width: 90px;
   height: 55px;
-  // border-radius: 50%;
    margin-top: 15px;
    margin-right: 5px;
    margin-right: 15px;
-   //border: #00ff15 2px solid;
 }
 
 .rota-link{
@@ -90,9 +88,6 @@
     }
   }
 }
-
-
-// Hamburger menu styles
 
 .logo {
   color: #00ff15;
@@ -140,11 +135,11 @@
 }
 
 /* Responsivo */
-@media (max-width: 800px) {
+@media (max-width: 700px) {
   .nav-links {
     position: fixed;
     top: 0;
-    right: -80vw; // comece fora da tela
+    right: -80vw;
     height: 100vh;
     width: 60vw;
     background: #111;
@@ -160,17 +155,34 @@
   }
   .hamburger {
     display: flex;
-    margin-right: 0.05rem// ajuste conforme necessário
+    margin-right: 0.05rem;
   }
 
   .logo-title {
   display: flex;
   align-items: center;
-  font-size: 1.3rem;
+  font-size: 17px;
   color: #ffffff;;
   text-decoration: none;
-  margin-left: 10px;
+  margin-left: 5px;
   margin-top: -10px;
+  }
+
+  .logo-subtitle {
+  font-size: 12px;
+   color: #ffffff;
+   margin-left: 85px;
+   margin-top: -30px;
+   
 }
+
+  .logo-image {
+  width: 70px;
+  height: 40px;
+   margin-top: 15px;
+   margin-right: 5px;
+   margin-right: 15px;
+  }
+
 }
 

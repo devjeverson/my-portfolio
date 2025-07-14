@@ -11,13 +11,13 @@
   flex-direction: column;
   flex: 1;
   height: 100%;
-  min-height: 0; // importante para flexbox
+  min-height: 0;
 }
 
 @media (max-width: 700px) {
   .main,
   .content-wrapper {
-    padding-bottom: 48px; // igual à altura do footer
+    padding-bottom: 48px;
   }
 }
 

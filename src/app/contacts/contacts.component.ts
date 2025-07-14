@@ -31,7 +31,7 @@ export class ContactsComponent {
 
     console.log('Dados do formulário:', this.form);
 
-    // Usando o endpoint correto descoberto: /send
+    
     fetch('https://contato-email-production.up.railway.app/send', {
       method: 'POST',
       headers: { 
@@ -49,20 +49,17 @@ export class ContactsComponent {
         this.mensagemEnviada = true;
         this.form = { nome: '', email: '', assunto: '', mensagem: '' };
       } else if (response.status === 500) {
-        // Erro 500 = dados chegaram no backend, mas erro na configuração de email
         console.log('✅ Formulário enviado! Erro 500 é problema de configuração do servidor de email');
         this.enviando = false;
-        this.mensagemEnviada = true; // Consideramos sucesso pois os dados chegaram
+        this.mensagemEnviada = true;
         this.form = { nome: '', email: '', assunto: '', mensagem: '' };
       } else {
-        // Outros erros
         throw new Error(`Erro ${response.status}: ${response.statusText}`);
       }
     })
     .catch(error => {
       console.error('❌ Erro ao enviar para /send:', error);
       
-      // Fallback: tenta com no-cors se houve erro de CORS
       if (error.message.includes('CORS') || error.name === 'TypeError') {
         console.log('🔄 Tentando novamente com no-cors...');
         
