@@ -1,0 +1,1 @@
+html,body{height:100%;margin:0;padding:0}body{min-height:100vh;font-family:Roboto,Helvetica Neue,sans-serif;background-color:#080000;overflow-x:hidden}app-root{display:flex;flex-direction:column;min-height:100vh}router-outlet{flex:1}:root{--header-height: 60px;--footer-height: 60px}
