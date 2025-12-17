@@ -12,10 +12,10 @@ interface Project {
   imports: [],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   standalone: true,
-  templateUrl: './projects-mobile.component.html',
-  styleUrl: './projects-mobile.component.scss'
+  templateUrl: './projects-open.component.html',
+  styleUrls: ['./projects-open.component.scss']
 })
-export class ProjectsMobileComponent {
+export class ProjectsOpenComponent {
     
   projects: Project[] = [
 
@@ -37,24 +37,7 @@ export class ProjectsMobileComponent {
       summary: 'Outro projeto incrível feito com Angular e design moderno',
       link: 'https://github.com/seuusuario/seurepositorio2'
     },
-     {
-      title: 'Projeto Ampliado',
-      image: 'assets/projeto-ampliado.png',
-      summary: 'Outro projeto incrível feito com Angular e design moderno',
-      link: 'https://github.com/seuusuario/seurepositorio2'
-    },
-     {
-      title: 'Projeto Ampliado',
-      image: 'assets/projeto-ampliado.png',
-      summary: 'Outro projeto incrível feito com Angular e design moderno',
-      link: 'https://github.com/seuusuario/seurepositorio2'
-    },
-     {
-      title: 'Projeto Ampliado',
-      image: 'assets/projeto-ampliado.png',
-      summary: 'Outro projeto incrível feito com Angular e design moderno',
-      link: 'https://github.com/seuusuario/seurepositorio2'
-    }
+   
   ];
 
   expandedCard: number | null = null;
