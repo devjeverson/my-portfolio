@@ -1,47 +1,36 @@
-name: Deploy to Prod
+name: Deploy to GitHub Pages
 
 on:
   push:
     branches:
-      - hk  # ou 'main' ou 'dev' — onde você vai fazer o merge final para enviar para produção
+      - main
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write # Necessário para a action fazer push na branch gh-pages
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v3
-      with:
-        fetch-depth: 0  # importante para poder fazer push para outros branches
+      uses: actions/checkout@v4
 
-    - name: Setup Node.js (exemplo com Node)
-      uses: actions/setup-node@v3
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
       with:
         node-version: 18
+        cache: 'npm'
 
     - name: Install dependencies
       run: npm install
 
     - name: Build project
-      run: npm run build  # ajuste para seu comando de build (ng build, yarn build, etc)
+      # Substitua 'portifolio-dev' pelo nome do seu repositório
+      run: npm run build -- --base-href /portifolio-dev/
 
-    - name: Deploy to prod branch
-      run: |
-        git config --global user.name "github-actions"
-        git config --global user.email "actions@github.com"
-
-        # Clona branch prod
-        git clone --branch prod https://github.com/${{ github.repository }} prod
-
-        # Limpa conteúdo da branch prod
-        rm -rf prod/*
-
-        # Copia build para prod
-        cp -r dist/* prod/
-
-        cd prod
-
-        git add .
-        git commit -m "Deploy from workflow: ${{ github.sha }}"
-        git push origin prod
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v4
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        # O diretório de build, conforme seu angular.json, é 'docs'
+        publish_dir: ./docs
