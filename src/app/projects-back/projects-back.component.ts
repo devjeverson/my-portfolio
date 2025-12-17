@@ -20,43 +20,19 @@ export class ProjectsBackComponent {
 
   projects: Project[] = [
     {
-      title: 'Projeto Ampliado',
+      title: 'Projeto 1',
       image: 'assets/projeto-ampliado.png',
       summary: 'Projeto de portfólio feito em Angular 18, com layout responsivo e integração de rotas',
       link: 'https://github.com/seuusuario/seurepositorio1'
     },
     {
-      title: 'Projeto Ampliado',
+      title: 'Projeto 2',
       image: 'assets/projeto-ampliado.png',
       summary: 'Outro projeto incrível feito com Angular e design moderno',
       link: 'https://github.com/seuusuario/seurepositorio2'
     },
      {
-      title: 'Projeto Ampliado',
-      image: 'assets/projeto-ampliado.png',
-      summary: 'Outro projeto incrível feito com Angular e design moderno',
-      link: 'https://github.com/seuusuario/seurepositorio2'
-    },
-     {
-      title: 'Projeto Ampliado',
-      image: 'assets/projeto-ampliado.png',
-      summary: 'Outro projeto incrível feito com Angular e design moderno',
-      link: 'https://github.com/seuusuario/seurepositorio2'
-    },
-     {
-      title: 'Projeto Ampliado',
-      image: 'assets/projeto-ampliado.png',
-      summary: 'Outro projeto incrível feito com Angular e design moderno',
-      link: 'https://github.com/seuusuario/seurepositorio2'
-    },
-     {
-      title: 'Projeto Ampliado',
-      image: 'assets/projeto-ampliado.png',
-      summary: 'Outro projeto incrível feito com Angular e design moderno',
-      link: 'https://github.com/seuusuario/seurepositorio2'
-    },
-     {
-      title: 'Projeto Ampliado',
+      title: 'Projeto 3',
       image: 'assets/projeto-ampliado.png',
       summary: 'Outro projeto incrível feito com Angular e design moderno',
       link: 'https://github.com/seuusuario/seurepositorio2'
