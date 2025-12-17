@@ -20,20 +20,25 @@
   
 }
 
-.card-row.expanded-mode {
-  display: grid;
-  place-items: center;
-  height: 100vh;
-  gap: 0;
-  padding: 0;
-  background: #111;;
-  position: relative;
- 
+.project-iframe {
+  border: none;
+  margin-top: 1rem;
+  border-radius: 10px;
+}
+
+.load-iframe-button {
+  margin-top: 1rem;
+  background: #0088cc;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
 }
 
 .project-card {
   width: 420px;
-  height: 680px;
+  height: 630px;
   padding: 20px;
   background-color: #1e1e1e;
   color: #fff;
@@ -70,9 +75,9 @@
   top: unset;
   transform: none;
   margin: 0 auto;
-  width: 95vw;
-  max-width: 1500px;
-  height: auto;
+  width: 100vw;
+  max-width: 1800px;
+  height: 90vh;
   min-height: 700px;
   z-index: 100;
   box-shadow: 0 16px 32px rgba(0,0,0,0.35);
@@ -81,7 +86,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 90px 32px;
+  padding: 2px;
 }
 
 .project-card:hover {
@@ -127,34 +132,9 @@
   box-shadow: 0 2px 8px rgba(0,0,0,0.18);
 }
 
-.nav-button {
-  position: fixed;
-  top: 50%;
-  transform: translateY(-50%);
-  background: none;
-  border: none;
-  color: #00ff15;
-  font-size: 3.5rem;
-  cursor: pointer;
-  z-index: 3000;
-  transition: color 0.2s;
-  padding: 0 12px;
-  user-select: none;
-}
 
-.nav-button.prev{
-  left: 32px;
-}
 
-.nav-button.next {
-  right: 32px;
-}
 
-.project-summary {
-  margin-top: 16px;
-  font-size: 20px;
-  line-height: 1.4;
-}
 
 .github-link {
   position: absolute;

@@ -131,7 +131,7 @@
 }
 
 .nav-links li a:hover {
-  color: #32f502;
+  color: #0d75fc;
 }
 
 /* Responsivo */
@@ -161,11 +161,16 @@
   .logo-title {
   display: flex;
   align-items: center;
+<<<<<<< HEAD
   font-size: 17px;
+=======
+  font-size: 1.1rem;
+>>>>>>> develop
   color: #ffffff;;
   text-decoration: none;
   margin-left: 5px;
   margin-top: -10px;
+<<<<<<< HEAD
   }
 
   .logo-subtitle {
@@ -184,5 +189,27 @@
    margin-right: 15px;
   }
 
+=======
+}
+
+  .logo-subtitle {
+  font-size: 0.7rem;
+   color: #ffffff;
+   margin-left: 50px;
+   margin-top: -20px;
+   flex-direction: column;
+   display: flex;
+  align-items: center;
+  }
+
+
+  .logo-image {
+    width: 50px;
+    height: 30px;
+    margin-top: 15px;
+    margin-right: 5px;
+    margin-right: 10px;
+  }
+>>>>>>> develop
 }
 
