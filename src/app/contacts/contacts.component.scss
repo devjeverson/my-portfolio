@@ -21,9 +21,9 @@
 
 h2 {
    font-size: 2rem;
-   color: #33ff33;
+   color: #0275f8;
    margin-bottom: 2rem;
-   border-left: 6px solid #33ff33;
+   border-left: 6px solid #0275f8;
    padding-left: 1rem;
    
 }
@@ -53,8 +53,8 @@ textarea {
 
    &:focus {
       outline: none;
-      border-color: #33ff33;
-      box-shadow: 0 0 5px #33ff33;
+      border-color: #0275f8;
+      box-shadow: 0 0 5px #0275f8;
    }
 }
 
@@ -65,7 +65,7 @@ textarea {
 
 button {
    background: #050505;
-   color: #33ff33;
+   color: #0275f8;
    font-size: 1rem;
    padding: 0.8rem;
    font-weight: bold;
@@ -73,22 +73,22 @@ button {
    border-radius: 5px;
    cursor: pointer;
    transition: 0.3s;
-   border: #28cc28;
+   border: #0275f8 solid 1px;
 
    &:hover {
-      background: #28cc28;
-      box-shadow: 0 0 10px #33ff33;
+      background: #0275f8;
+      box-shadow: 0 0 10px #0275f8;
    }
 
    &:disabled {
       background: #000000;
       cursor: not-allowed;
-      border: #33ff33 solid 1px;
+      border: #0275f8 solid 1px;
    }
 }
 
 .mensagem-sucesso {
-      color: #33ff33;
+      color: #0275f8;
       margin-top: 1rem;
       font-weight: 600;
 }
